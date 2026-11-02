@@ -45,19 +45,46 @@ const Hero = () => {
         >
             {/* Hero Text */}
             <div className="text-center mt-8">
-                <motion.h1
-                    className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl"
+                <motion.div
+                    className="mb-5 inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/80 px-3 py-1.5 text-sm font-medium text-neutral-700 shadow-sm backdrop-blur-sm dark:border-neutral-800 dark:bg-neutral-900/70 dark:text-neutral-200"
                     variants={fadeUpVariants}
                 >
-                    منصة نالش لإنشاء متجرك الإلكتروني
+                    <span className="h-2 w-2 rounded-full bg-emerald-500" />
+                    متجر ذكي • سريع • آمن • مرن
+                </motion.div>
+                <motion.h1
+                    className="text-4xl font-black tracking-tight text-gray-900 dark:text-white sm:text-6xl"
+                    variants={fadeUpVariants}
+                >
+                    منصة نالش الخارقة لبناء متجر إلكتروني مميز
                 </motion.h1>
                 <motion.p
-                    className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
+                    className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400 max-w-4xl mx-auto"
                     variants={fadeUpVariants}
                 >
-                    أنشئ متجرك الإلكتروني، أضف منتجاتك ونظّم أقسامها، وتابع الطلبات من لوحة تحكم واحدة.
+                    ابدأ متجرك بشكل احترافي مع أدوات ذكية، إدارة فورية للمنتجات والطلبات، واجهة خفيفة، تجربة مستقرة وآمنة، وإمكانية التوسع السريع بدون تعقيد أو تكاليف إضافية.
                 </motion.p>
             </div>
+
+            <motion.div
+                className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-neutral-600 dark:text-neutral-300"
+                variants={fadeUpVariants}
+            >
+                {[
+                    "ذكاء اصطناعي",
+                    "أمان وثقة",
+                    "سرعة لا تضاهى",
+                    "مرونة عالية",
+                    "مجاني ومفتوح",
+                ].map((item) => (
+                    <span
+                        key={item}
+                        className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1.5 dark:border-neutral-800 dark:bg-neutral-900"
+                    >
+                        {item}
+                    </span>
+                ))}
+            </motion.div>
 
             {/* Hero Actions */}
             <motion.div
