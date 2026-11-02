@@ -12,6 +12,7 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dash.appi.dpdns.org"),
   applicationName: "نالش",
   title: {
     default: "نالش | منصة إنشاء متجر إلكتروني وإدارته",
@@ -30,7 +31,12 @@ export const metadata: Metadata = {
   ],
   creator: "نالش",
   icons: {
-    icon: "/nalsh-mark-light.svg",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/nalsh-mark-light.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icon.svg",
+    apple: "/nalsh-mark-light.svg",
   },
   openGraph: {
     type: "website",
@@ -39,12 +45,21 @@ export const metadata: Metadata = {
     title: "نالش | منصة إنشاء متجر إلكتروني وإدارته",
     description:
       "أنشئ متجرك الإلكتروني مع نالش عبر واجهة خفيفة وسريعة الاستخدام، وأدر المنتجات والأقسام والطلبات من لوحة واحدة.",
+    images: [
+      {
+        url: "/nalsh-mark-light.svg",
+        width: 512,
+        height: 512,
+        alt: "نالش",
+      },
+    ],
   },
   twitter: {
     card: "summary",
     title: "نالش | منصة إنشاء متجر إلكتروني وإدارته",
     description:
       "أنشئ متجرك الإلكتروني مع نالش عبر واجهة خفيفة وسريعة الاستخدام، وأدر المنتجات والأقسام والطلبات من لوحة واحدة.",
+    images: ["/nalsh-mark-light.svg"],
   },
   robots: {
     index: true,
